@@ -12,7 +12,7 @@ namespace SnakeAndLadder
             {
                 Console.WriteLine("Welcome to the snake and ladder game");
                 Console.WriteLine("---------------------------------------");
-                Console.WriteLine("1.GameStart \n2.Roll Dice  \n3.Exit");
+                Console.WriteLine("1.GameStart \n2.Roll Dice\n3.PlayerThenCheckOptions  \n4.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 Game game = new Game();
                 switch (options)
@@ -23,6 +23,9 @@ namespace SnakeAndLadder
                     case 2:
                         game.PlayerRollsDice();
                         break;
+                    case 3:
+                        game.CheckOptions();
+                        break; 
                     default:
                         flag = false;
                         break;
